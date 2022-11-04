@@ -1,0 +1,44 @@
+<hello name="{{ name }}"></hello>
+<div class="modal-body">
+  <ng-container
+    [ngTemplateOutlet]="resumeList"
+    [ngTemplateOutletContext]="{ list: model.resumeInfo.skillset }"
+  ></ng-container>
+</div>
+
+<!-- dayparts info template -->
+<ng-template #resumeList let-list="list">
+  <div *ngFor="let item of list">
+    <ng-container
+      [ngTemplateOutlet]="resumeItem"
+      [ngTemplateOutletContext]="{ $implicit: item }"
+    ></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #resumeItem let-item>
+  <div class="{{ item.class }}">
+    <h6>{{ item.header }}</h6>
+    <table class="p-datatable p-datatable-striped mt-2">
+      <tbody class="p-datatable-tbody">
+        <tr>
+          <td *ngFor="let data of item?.columns" class="font-bold">
+            {{ data.heading }}
+          </td>
+        </tr>
+        <tr *ngFor="let row of item?.data">
+          <td
+            *ngFor="
+              let data of this._combineDaypartsInfoData(item?.columns, row)
+            "
+          >
+            {{ data }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <footer class="mb-4">
+      <p *ngFor="let footer of item?.footer">{{ footer.footer }}</p>
+    </footer>
+  </div>
+</ng-template>
