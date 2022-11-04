@@ -1,24 +1,23 @@
-<hello name="{{ name }}"></hello>
 <div class="grid">
-
   <div class="col-12">
+    <ng-container
+      [ngTemplateOutlet]="resumeClientList"
+      [ngTemplateOutletContext]="{ list: model.resumeInfo.clients }"
+    ></ng-container>
 
-  <ng-container
+    <ng-container
       [ngTemplateOutlet]="resumeList"
       [ngTemplateOutletContext]="{ list: model.resumeInfo.portfolio }"
-      ></ng-container>
-
+    ></ng-container>
   </div>
-
 
   <ng-container
     [ngTemplateOutlet]="resumeList"
     [ngTemplateOutletContext]="{ list: model.resumeInfo.skillset }"
   ></ng-container>
-  
 </div>
 
-<!-- dayparts info template -->
+
 <ng-template #resumeList let-list="list">
   <div *ngFor="let item of list">
     <ng-container
@@ -27,6 +26,16 @@
     ></ng-container>
   </div>
 </ng-template>
+
+<ng-template #resumeClientList let-list="list">
+<div *ngFor="let item of list">
+  <ng-container
+    [ngTemplateOutlet]="resumeClients"
+    [ngTemplateOutletContext]="{ $implicit: item }"
+  ></ng-container>
+</div>
+</ng-template>
+
 
 <ng-template #resumeItem let-item>
   <div class="{{ item.class }}">
@@ -40,9 +49,7 @@
         </tr>
         <tr *ngFor="let row of item?.data">
           <td
-            *ngFor="
-              let data of this._combineResumeInfoData(item?.columns, row)
-            "
+            *ngFor="let data of this._combineResumeInfoData(item?.columns, row)"
           >
             {{ data }}
           </td>
@@ -52,5 +59,20 @@
     <footer class="mb-4">
       <p *ngFor="let footer of item?.footer">{{ footer.footer }}</p>
     </footer>
+  </div>
+</ng-template>
+
+<ng-template #resumeClients let-item>
+  <div class="{{ item.class }} grid">
+    <h6>{{ item.header }}</h6>
+
+    <div class="col-3" *ngFor="let data of item.images">
+      <img
+        src="{{data.img_thumb}}"
+        alt="portfolio image"
+        class="img-responsive img-thumbnail"
+      />
+    </div>
+    
   </div>
 </ng-template>

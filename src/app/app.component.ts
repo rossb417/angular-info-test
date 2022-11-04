@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { Resume } from './app.model';
 
 @Component({
@@ -8,7 +7,6 @@ import { Resume } from './app.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Resume';
 
   public model = class {
     public static showInfo: boolean;
