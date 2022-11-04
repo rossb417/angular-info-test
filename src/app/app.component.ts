@@ -15,7 +15,7 @@ export class AppComponent {
     public static resumeInfo = Resume;
   };
 
-  public _combineDaypartsInfoData(column, row) {
+  public _combineResumeInfoData(column, row) {
     const mappedDataRow: string[] = [];
     column.forEach((columnEl) => {
       mappedDataRow.push(row[columnEl.field]);

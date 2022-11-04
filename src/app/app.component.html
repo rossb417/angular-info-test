@@ -29,7 +29,7 @@
         <tr *ngFor="let row of item?.data">
           <td
             *ngFor="
-              let data of this._combineDaypartsInfoData(item?.columns, row)
+              let data of this._combineResumeInfoData(item?.columns, row)
             "
           >
             {{ data }}
