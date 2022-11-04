@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Resume } from './app.model';
 
@@ -8,7 +8,7 @@ import { Resume } from './app.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
+  name = 'Resume';
 
   public model = class {
     public static showInfo: boolean;

@@ -1,9 +1,21 @@
 <hello name="{{ name }}"></hello>
-<div class="modal-body">
+<div class="grid">
+
+  <div class="col-12">
+
+  <ng-container
+      [ngTemplateOutlet]="resumeList"
+      [ngTemplateOutletContext]="{ list: model.resumeInfo.portfolio }"
+      ></ng-container>
+
+  </div>
+
+
   <ng-container
     [ngTemplateOutlet]="resumeList"
     [ngTemplateOutletContext]="{ list: model.resumeInfo.skillset }"
   ></ng-container>
+  
 </div>
 
 <!-- dayparts info template -->
