@@ -48,11 +48,11 @@ export const Resume = {
       footer: [
         {
           footer:
-            '*Early Morning: Includes Talk & News programs.  Excludes weekend sports & kids programming',
+            '',
         },
         {
           footer:
-            '**Early Fringe: Excludes news. Includes Sat/Sun 1pm to 6pm (1pm to 5pm Central/Mtn) but excludes Weekend Sports & Kids programming',
+            '',
         },
    
       ],
