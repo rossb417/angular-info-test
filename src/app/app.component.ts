@@ -13,7 +13,7 @@ export class AppComponent {
     public static resumeInfo = Resume;
   };
 
-  public _combineResumeInfoData(column, row) {
+  public _combineTableData(column, row) {
     const mappedDataRow: string[] = [];
     column.forEach((columnEl) => {
       mappedDataRow.push(row[columnEl.field]);

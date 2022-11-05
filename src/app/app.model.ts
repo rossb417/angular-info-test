@@ -10,19 +10,25 @@ export const Resume = {
           img_thumb: 'https://rs-brown.com/images/clients/thumbs/fender.png',
         },
         {
-          img_thumb: 'https://rs-brown.com/images/clients/thumbs/fender.png',
+          img_thumb: 'https://rs-brown.com/images/clients/thumbs/motorola.png',
         },
         {
-          img_thumb: 'https://rs-brown.com/images/clients/thumbs/fender.png',
+          img_thumb: 'https://rs-brown.com/images/clients/thumbs/sheknows.png',
         },
         {
-          img_thumb: 'https://rs-brown.com/images/clients/thumbs/fender.png',
+          img_thumb: 'https://rs-brown.com/images/clients/thumbs/bo.png',
         },
         {
-          img_thumb: 'https://rs-brown.com/images/clients/thumbs/fender.png',
+          img_thumb: 'https://rs-brown.com/images/clients/thumbs/jackson.png',
         },
         {
-          img_thumb: 'https://rs-brown.com/images/clients/thumbs/fender.png',
+          img_thumb: 'https://rs-brown.com/images/clients/thumbs/mtv.png',
+        },
+        {
+          img_thumb: 'https://rs-brown.com/images/clients/thumbs/samsonite.png',
+        },
+        {
+          img_thumb: 'https://rs-brown.com/images/clients/thumbs/parkn.png',
         },
       ],
     },
@@ -99,48 +105,33 @@ export const Resume = {
       columns: [
         {
           heading: 'Tools/Software',
-          field: 'tools',
+          data: [
+            { line: 'Visual Studio, Eclipse' },
+            { line: 'balsamiq, Axure, Figma'},
+            { line: 'Github, GitBucket, Tower'},
+            { line: 'Photoshop, Illustrator, After Effects'}
+          ]
         },
         {
           heading: 'Frameworks/CMS',
-          field: 'framework',
+          data: [
+            { line: 'Angular 7+, React, Vue'},
+            { line: 'Demandware, Shopify, Amazon, Volusion'},
+            { line: 'Wordpress , Joomla, EE'},
+            { line: 'Cake PHP/Smarty 3, Codeigniter'}
+          ]
         },
+
         {
-          heading: 'CSS Libraries',
-          field: 'libraries',
-        },
-      ],
-      data: [
-        {
-          tools: 'Visual Studio, Eclipse',
-          framework: 'Angular 7+, React, Vue',
-          libraries: 'LESS / Sass',
-        },
-        {
-          tools: 'balsamiq, Axure, Figma',
-          framework: 'Demandware, Shopify, Amazon, Volusion',
-          libraries: 'Bootstrap',
-        },
-        {
-          tools: 'Github, GitBucket, Tower',
-          framework: 'Wordpress , Joomla, EE',
-          libraries: 'Primeflex',
-        },
-        {
-          tools: 'Photoshop, Illustrator, After Effects',
-          framework: 'Cake PHP/Smarty 3, Codeigniter',
-          libraries: 'Foundation',
+          heading: 'Libraries',
+          data: [
+            { line: 'LESS / SASS'},
+            { line: 'Primeflex'},
+            { line: 'Bootstrap / Foundation'}
+          ]
         },
       ],
 
-      footer: [
-        {
-          footer: '',
-        },
-        {
-          footer: '',
-        },
-      ],
     },
   ],
 };

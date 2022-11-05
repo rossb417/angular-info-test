@@ -11,12 +11,13 @@
     ></ng-container>
   </div>
 
-  <ng-container
-    [ngTemplateOutlet]="resumeList"
-    [ngTemplateOutletContext]="{ list: model.resumeInfo.skillset }"
-  ></ng-container>
+  <div class="col-12 p-4">
+    <ng-container
+      [ngTemplateOutlet]="resumeSkillsList"
+      [ngTemplateOutletContext]="{ list: model.resumeInfo.skillset }"
+    ></ng-container>
+  </div>
 </div>
-
 
 <ng-template #resumeList let-list="list">
   <div *ngFor="let item of list">
@@ -27,15 +28,54 @@
   </div>
 </ng-template>
 
-<ng-template #resumeClientList let-list="list">
-<div *ngFor="let item of list">
-  <ng-container
-    [ngTemplateOutlet]="resumeClients"
-    [ngTemplateOutletContext]="{ $implicit: item }"
-  ></ng-container>
-</div>
+<ng-template #resumeSkillsList let-list="list">
+  <div *ngFor="let item of list">
+    <ng-container
+      [ngTemplateOutlet]="resumeSkills"
+      [ngTemplateOutletContext]="{ $implicit: item }"
+    ></ng-container>
+  </div>
 </ng-template>
 
+<ng-template #resumeClientList let-list="list">
+  <div *ngFor="let item of list">
+    <ng-container
+      [ngTemplateOutlet]="resumeClients"
+      [ngTemplateOutletContext]="{ $implicit: item }"
+    ></ng-container>
+  </div>
+</ng-template>
+
+<!-- base ui blocks -->
+
+<ng-template #resumeClients let-item>
+  <h4>{{ item.header }}</h4>
+  <div class="{{ item.class }} grid">
+    <div class="col-3" *ngFor="let data of item.images">
+      <img
+        src="{{ data.img_thumb }}"
+        alt="portfolio image"
+        class="img-responsive img-thumbnail"
+      />
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #resumeSkills let-item>
+  <div class="{{ item.class }} grid">
+    <h6>{{ item.header }}</h6>
+    <div class="col-3:lg" *ngFor="let row of item.columns">
+      <ul>
+        <p class="font-bold">
+          {{ row.heading }}
+        </p>
+        <li *ngFor="let data of row.data">
+          <p>{{ data.line }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
 
 <ng-template #resumeItem let-item>
   <div class="{{ item.class }}">
@@ -48,9 +88,7 @@
           </td>
         </tr>
         <tr *ngFor="let row of item?.data">
-          <td
-            *ngFor="let data of this._combineResumeInfoData(item?.columns, row)"
-          >
+          <td *ngFor="let data of this._combineTableData(item?.columns, row)">
             {{ data }}
           </td>
         </tr>
@@ -59,20 +97,5 @@
     <footer class="mb-4">
       <p *ngFor="let footer of item?.footer">{{ footer.footer }}</p>
     </footer>
-  </div>
-</ng-template>
-
-<ng-template #resumeClients let-item>
-  <div class="{{ item.class }} grid">
-    <h6>{{ item.header }}</h6>
-
-    <div class="col-3" *ngFor="let data of item.images">
-      <img
-        src="{{data.img_thumb}}"
-        alt="portfolio image"
-        class="img-responsive img-thumbnail"
-      />
-    </div>
-    
   </div>
 </ng-template>
