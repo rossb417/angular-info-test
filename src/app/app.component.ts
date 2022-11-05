@@ -7,17 +7,13 @@ import { Resume } from './app.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-
   public model = class {
     public static showInfo: boolean;
     public static resumeInfo = Resume;
+    public static display: boolean;
   };
 
-  public _combineTableData(column, row) {
-    const mappedDataRow: string[] = [];
-    column.forEach((columnEl) => {
-      mappedDataRow.push(row[columnEl.field]);
-    });
-    return mappedDataRow;
+  showDialog() {
+    this.model.display = true;
   }
 }
