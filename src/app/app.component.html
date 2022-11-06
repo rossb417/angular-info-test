@@ -128,7 +128,7 @@
 
 <ng-template #resumePortfolio let-item>
   <h4>{{ item.header }}</h4>
-  <div class="{{ item.class }} grid">
+  <div class="{{ item.class }} grid hidden">
     <div *ngFor="let row of item.data" class="col-3">
       <div
         (click)="showDialog()"

@@ -45,7 +45,7 @@ export class AppComponent {
         company: 'Fender',
         position: 'Sr Interactive Designer',
         summary:
-          'Sr Interactive Designer at Fender (FMIC) during entire site refactor to demandware platform. The support, forums and content sites inherited the same front end technologies.The content site was built in codeigniter framework and was lead to restructuring the architecture to emcompass a faster build time by building fewer block templates that had documented classes which gave the designers multiple options to choose. Keeping the modular approach and help with rapid development, as well as keeping the content separate in language files from the code. This solved content updates without the use for the end user to go into any code files. I rewrote the entire css, as well as the majority of the codebase to seemlessly blend in with the new site while still maintaining optimal code. Also esponsible for fixing over a thousand bugs from the main Ecommerce store as well.',
+          'Designed Fender owned websites, applications, and internal feature pages, often with very tight deadlines. My work also included the biggest migration of all six Fender sites to an all-responsive framework. All sites were responsive designs utilizing mobile first approach. Tools used for the design side UI were Photoshop/XD',
         img_thumb: 'https://rs-brown.com/images/thumbs/fender-thumb.jpg',
         img: 'https://rs-brown.com/images/info/fender/fender-3.jpg',
       },
