@@ -121,7 +121,7 @@ appendTo="body"
 
 <div class="card">
 <h5>Customized</h5>
-<p-timeline [value]="model.resumeInfo.portfolio.data" align="alternate" styleClass="customized-timeline">
+<p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
   <ng-template pTemplate="marker" let-event>
     <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
               <i [ngClass]="event.icon"></i>
@@ -129,10 +129,7 @@ appendTo="body"
   </ng-template>
   <ng-template pTemplate="content" let-event>
     <p-card [header]="event.status" [subheader]="event.date">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
-        repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-        neque quas!</p>
+      <p>{{event.summary}}</p>
       <button pButton label="Read more" class="p-button-text"></button>
     </p-card>
   </ng-template>

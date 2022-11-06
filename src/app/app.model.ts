@@ -40,11 +40,7 @@ export const Resume = {
       header: '',
       data: [
         {
-          status: "Ordered",
-          date: "2015",
-   
-          color: "#9C27B0",
-
+     
           company: 'Fender',
           position: 'Sr Interactive Designer',
           summary:
@@ -53,11 +49,7 @@ export const Resume = {
           img: 'https://rs-brown.com/images/info/fender/fender-3.jpg',
         },
         {
-          status: "Ordered",
-          date: "2012",
-   
-          color: "#9C27B0",
-
+      
           company: 'Samsonite Store 2012',
           position: 'UI/UX Design',
           summary:
