@@ -10,7 +10,7 @@ export const Skillset = [
           heading: 'Tools/Software',
           data: [
             { line: 'Visual Studio, Eclipse' },
-            { line: 'balsamiq, Axure, Figma' },
+            { line: 'Figma, XD' },
             { line: 'Github, GitBucket, Tower' },
             { line: 'Photoshop, Illustrator, After Effects' },
           ],
@@ -18,10 +18,10 @@ export const Skillset = [
         {
           heading: 'Frameworks/CMS',
           data: [
-            { line: 'Angular 7+, React, Vue' },
-            { line: 'Demandware, Shopify, Amazon, Volusion' },
-            { line: 'Wordpress , Joomla, EE' },
-            { line: 'Cake PHP/Smarty 3, Codeigniter' },
+            { line: 'Angular 12+, Vue' },
+            { line: 'Demandware/Salesforce, Shopify' },
+            { line: 'Wordpress' },
+            { line: 'Cake PHP/Smarty, Codeigniter' },
           ],
         },
 
@@ -29,7 +29,7 @@ export const Skillset = [
           heading: 'Libraries',
           data: [
             { line: 'LESS / SASS' },
-            { line: 'Primeflex' },
+            { line: 'Primeflex, Tailwind' },
             { line: 'Bootstrap / Foundation' },
           ],
         },
