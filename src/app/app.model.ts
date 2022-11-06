@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PrimeIcons } from 'primeng/api';
 
-export const Skillset = {
-  skillset: [
+export const Skillset = [
     {
       class: 'skillset',
       header: '',
@@ -36,13 +35,11 @@ export const Skillset = {
         },
       ],
     },
-  ],
-};
+  ];
 
-export const Portfolio = {
-  portfolio: [
+
+export const Portfolio = [
     {
-
       date: '2017 +',
       icon: PrimeIcons.SHOPPING_CART,
       color: '#9C27B0',
@@ -78,11 +75,9 @@ export const Portfolio = {
       img: 'https://rs-brown.com/images/info/fender/samsonite-2.jpg',
     },
 
-  ],
-};
+  ];
 
-export const Clients = {
-  clients: [
+export const Clients = [
     {
       class: 'clients',
       header: 'Clients I have worked for',
@@ -113,9 +108,9 @@ export const Clients = {
         },
       ],
     },
-  ],
-};
+  ];
 
+/*
 export const Resume = {
   clients: [
     {
@@ -228,3 +223,4 @@ export const Resume = {
     },
   ],
 };
+*/

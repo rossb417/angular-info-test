@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Clients, Portfolio, Resume, Skillset } from './app.model';
+import { Clients, Portfolio, Skillset } from './app.model';
 
 import { PrimeIcons } from 'primeng/api';
 
@@ -11,10 +11,9 @@ import { PrimeIcons } from 'primeng/api';
 export class AppComponent {
   public model = class {
     public static showInfo: boolean;
-    public static resumeInfo = Resume;
-    public static skillset = Skillset.skillset;
-    public static clients = Clients.clients;
-    public static portfolio = Portfolio.portfolio;
+    public static skillset = Skillset;
+    public static clients = Clients;
+    public static portfolio = Portfolio;
     public static display: boolean;
   };
 
