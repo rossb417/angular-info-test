@@ -38,12 +38,11 @@
   </div>
 </div>
 
-
 <p-dialog
-appendTo="body"
-[(visible)]="model.display"
-[style]="{ width: '50vw' }"
-[baseZIndex]="10000"
+  appendTo="body"
+  [(visible)]="model.display"
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
 >
 </p-dialog>
 
@@ -90,12 +89,11 @@ appendTo="body"
 <ng-template #resumeClients let-item>
   <h4>{{ item.header }}</h4>
   <div class="{{ item.class }} grid">
-    <div class="col-3" *ngFor="let data of item.images">
-      <img
-        src="{{ data.img_thumb }}"
-        alt="portfolio image"
-        class="surface-card shadow-2 p-3 border-round"
-      />
+    <div
+      class="col-1 surface-card shadow-2 p-3 border-round mr-2"
+      *ngFor="let data of item.images"
+    >
+      <img src="{{ data.img_thumb }}" alt="portfolio image" class="w-full" />
     </div>
   </div>
 </ng-template>
@@ -103,49 +101,57 @@ appendTo="body"
 <ng-template #resumePortfolio let-item>
   <h4>{{ item.header }}</h4>
   <div class="{{ item.class }} grid">
-    <div *ngFor="let row of item.data" class="col-3" >
+    <div *ngFor="let row of item.data" class="col-3">
       <div
         (click)="showDialog()"
-        class="surface-card shadow-2 p-3 border-round">
+        class="surface-card shadow-2 p-3 border-round"
+      >
         <img src="{{ row.img_thumb }}" alt="portfolio image" class="w-full" />
       </div>
       <div #modalContent>
         <h5>{{ row.position }}</h5>
-          <p>
-            {{ row.summary }}
-          </p>
+        <p>
+          {{ row.summary }}
+        </p>
       </div>
     </div>
   </div>
 </ng-template>
 
 <div class="card">
-<h5>Customized</h5>
-<p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
-  <ng-template pTemplate="marker" let-event>
-    <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
-              <i [ngClass]="event.icon"></i>
-          </span>
-  </ng-template>
-  <ng-template pTemplate="content" let-event>
-    <p-card [header]="event.status" [subheader]="event.date">
-      <p>{{event.summary}}</p>
-      <button pButton label="Read more" class="p-button-text"></button>
-    </p-card>
-  </ng-template>
-</p-timeline>
+  <h5>Customized</h5>
+  <p-timeline
+    [value]="events1"
+    align="alternate"
+    styleClass="customized-timeline"
+  >
+    <ng-template pTemplate="marker" let-event>
+      <span
+        class="custom-marker p-shadow-2"
+        [style.backgroundColor]="event.color"
+      >
+        <i [ngClass]="event.icon"></i>
+      </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-event>
+      <p-card [header]="event.company" [subheader]="event.position">
+        <p>{{ event.date }}</p>
+        <p>{{ event.summary }}</p>
+        <button pButton label="Read more" class="p-button-text"></button>
+      </p-card>
+    </ng-template>
+  </p-timeline>
 </div>
-
-
 
 <ng-template #resumeSkills let-item>
   <div class="{{ item.class }} grid">
     <h6>{{ item.header }}</h6>
-    <div class="col-3:lg" *ngFor="let row of item.columns">
+    <div class="col-3:lg shadow-2 p-3 h-20rem flex flex-column surface-card mr-2" style="border-radius: 6px" *ngFor="let row of item.columns">
       <ul>
         <p class="font-bold">
           {{ row.heading }}
         </p>
+        <hr class="my-3 mx-0 border-top-1 border-none surface-border" />
         <li *ngFor="let data of row.data">
           <p>{{ data.line }}</p>
         </li>

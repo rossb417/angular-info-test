@@ -27,7 +27,7 @@ export class AppComponent {
     this.events1 = [
       {
         status: 'Ordered',
-        date: '15/10/2020 10:30',
+        date: '2014-2015',
         icon: PrimeIcons.SHOPPING_CART,
         color: '#9C27B0',
         image: 'game-controller.jpg',
