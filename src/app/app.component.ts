@@ -26,11 +26,22 @@ export class AppComponent {
   ngOnInit() {
     this.events1 = [
       {
-        status: 'Ordered',
+  
+        date: '2017 +',
+        icon: PrimeIcons.SHOPPING_CART,
+        color: '#9C27B0',
+        company: 'Sqad',
+        position: 'UI Designer/Developer',
+        summary:
+          'UI designer and developer who was responsible for refactoring the design of new application. Utilizing Figma/XD for wireframe concepts, and would pitch features weekly. Wrote our own styles guides and component libraries for an enterprise level application. Many features integrated, but implemented dark, light, and black mode design for this app. The design has been through many refactors and implemented so many features for this application',
+        img_thumb: 'https://rs-brown.com/images/thumbs/fender-thumb.jpg',
+        img: 'https://rs-brown.com/images/info/fender/fender-3.jpg',
+      },
+      {
+  
         date: '2014-2015',
         icon: PrimeIcons.SHOPPING_CART,
         color: '#9C27B0',
-        image: 'game-controller.jpg',
         company: 'Fender',
         position: 'Sr Interactive Designer',
         summary:
@@ -40,30 +51,18 @@ export class AppComponent {
       },
       {
         status: 'Processing',
-        date: '15/10/2020 14:00',
+        date: '2012-2014',
         icon: PrimeIcons.COG,
         color: '#673AB7',
-        company: 'Samsonite Store 2012',
-        position: 'UI/UX Design',
+        company: 'SheKnows',
+        position: 'Sr. UI/UX Design/Developer',
         summary:
-          'Design for the new Samsonite Shop for the new US store. This project took about 3 months, including wireframes and designs for all pages of the ecommerce store. There were multiple wires and prototypes delivered to the client for AB testing. Each page resulted in the optimal UX flow that was decided to be the final prototype of each of the home, category landing, search landing, product landing pages, product detail pages and the entire checkout process. This was based on the amazon webstore 2.0 system.',
+          'Originally hired for the design team and then went to lead the UX team. Designed feature sites for SheKnows.com owned websites. Designed custom newsletters and woman magazines that were converted to online blogs. Designed Facebook site for ones of the greatest photographers in the world',
         img_thumb: 'https://rs-brown.com/images/thumbs/samsonite-thumb.jpg',
         img: 'https://rs-brown.com/images/info/fender/samsonite-2.jpg',
       },
-      {
-        status: 'Shipped',
-        date: '15/10/2020 16:15',
-        icon: PrimeIcons.ENVELOPE,
-        color: '#FF9800',
-      },
-      {
-        status: 'Delivered',
-        date: '16/10/2020 10:00',
-        icon: PrimeIcons.CHECK,
-        color: '#607D8B',
-      },
+ 
     ];
 
-    this.events2 = ['2020', '2021', '2022', '2023'];
   }
 }
