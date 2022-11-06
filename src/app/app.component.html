@@ -95,29 +95,29 @@
   <h4>{{ item.header }}</h4>
 
   <div class="{{ item.class }} grid">
-    <div class="col-3" *ngFor="let data of item.data">
-      <img
-        src="{{ data.img_thumb }}"
-        alt="portfolio image"
+    <div *ngFor="let row of item.data" class="col-3" >
+      <div
+        (click)="showDialog()"
         class="surface-card shadow-2 p-3 border-round"
-      />
+   
+      >
+        <img src="{{ row.img_thumb }}" alt="portfolio image" class="w-full" />
+      </div>
+
+      <p-dialog
+        header="{{ row.company }}"
+        appendTo="body"
+        [(visible)]="model.display"
+        [style]="{ width: '50vw' }"
+        [baseZIndex]="10000"
+      >
+        <h5>{{ row.position }}</h5>
+        <p>
+          {{ row.summary }}
+        </p>
+      </p-dialog>
     </div>
   </div>
-
-  <button (click)="showDialog()">Click Here</button>
-
-  <p-dialog
-    header="Header Test"
-    appendTo="body"
-    [(visible)]="model.display"
-    [style]="{ width: '50vw' }"
-    [baseZIndex]="10000"
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    </p>
-  </p-dialog>
 </ng-template>
 
 <ng-template #resumeSkills let-item>
