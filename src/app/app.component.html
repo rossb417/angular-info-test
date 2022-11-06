@@ -23,7 +23,7 @@
   <div class="col-12">
     <div class="card">
       <p-timeline
-        [value]="events1"
+        [value]="model.portfolio"
         align="alternate"
         styleClass="customized-timeline"
       >
@@ -47,19 +47,20 @@
 
     <ng-container
       [ngTemplateOutlet]="resumeClientList"
-      [ngTemplateOutletContext]="{ list: model.resumeInfo.clients }"
+      [ngTemplateOutletContext]="{ list: model.clients }"
     ></ng-container>
-
+<!--
     <ng-container
       [ngTemplateOutlet]="resumePortfolioList"
       [ngTemplateOutletContext]="{ list: model.resumeInfo.portfolio }"
     ></ng-container>
+-->
   </div>
 
   <div class="col-12 p-4">
     <ng-container
       [ngTemplateOutlet]="resumeSkillsList"
-      [ngTemplateOutletContext]="{ list: model.resumeInfo.skillset }"
+      [ngTemplateOutletContext]="{ list: model.skillset }"
     ></ng-container>
   </div>
 </div>
@@ -148,7 +149,7 @@
   <div class="{{ item.class }} grid">
     <h6>{{ item.header }}</h6>
     <div
-      class="col-4 shadow-2 p-2 h-20rem surface-card border-round-xs"
+      class="col-12 lg:col-4 shadow-2 p-2 h-20rem surface-card border-round-xs"
       *ngFor="let row of item.columns"
     >
       <ul>
