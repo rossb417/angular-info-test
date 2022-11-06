@@ -38,6 +38,15 @@
   </div>
 </div>
 
+
+<p-dialog
+appendTo="body"
+[(visible)]="model.display"
+[style]="{ width: '50vw' }"
+[baseZIndex]="10000"
+>
+</p-dialog>
+
 <!--
 <ng-template #resumeList let-list="list">
   <div *ngFor="let item of list">
@@ -104,19 +113,15 @@
         <img src="{{ row.img_thumb }}" alt="portfolio image" class="w-full" />
       </div>
 
-      <p-dialog
-        header="{{ row.company }}"
-        appendTo="body"
-        [(visible)]="model.display"
-        [style]="{ width: '50vw' }"
-        [baseZIndex]="10000"
-      >
+      <div #modalContent>
         <h5>{{ row.position }}</h5>
-        <p>
-          {{ row.summary }}
-        </p>
-      </p-dialog>
+          <p>
+            {{ row.summary }}
+          </p>
+      </div>
+
     </div>
+
   </div>
 </ng-template>
 
