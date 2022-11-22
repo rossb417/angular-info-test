@@ -46,7 +46,7 @@ export const Portfolio = [
       company: 'Sqad',
       position: 'UI Architect / UI Developer',
       summary:
-        'UI designer and developer who was responsible for refactoring the design of new application. Utilizing Figma/XD for wireframe concepts, and would pitch features weekly. Wrote our own styles guides and component libraries for an enterprise level application. Many features integrated, but implemented dark, light, and black mode design for this app. The design has been through many refactors and implemented so many features for this application',
+        'UI architect who was responsible for refactoring the new design implementation of the new MediaCost application. Utilizing Figma/XD for wireframe concepts, and would pitch features weekly. Wrote our own styles guides and component libraries for an enterprise level application. Many features integrated, but implemented dark/light mode design, drag and drop, dialog panels, custom loaders and overall layout architecture. The design has been through many refactors and implemented a lot of features for this application',
       img_thumb: 'https://rs-brown.com/images/thumbs/fender-thumb.jpg',
       img: 'https://rs-brown.com/images/info/fender/fender-3.jpg',
     },
@@ -58,7 +58,7 @@ export const Portfolio = [
       company: 'Fender',
       position: 'Sr Interactive Designer / Sr Front End Developer',
       summary:
-        'Designed Fender owned websites, applications, and internal feature pages, often with very tight deadlines. My work also included the biggest migration of all six Fender sites to an all-responsive framework. All sites were responsive designs utilizing mobile first approach. Tools used for the design side UI were Photoshop/XD',
+        'Implemented Fender new redesign that took a year.  Went through a migration to salesforce/demandware and was in charge of new layouts, applications, and internal feature pages. My work also included the biggest migration of all four Fender sites to an all-responsive foundation framework. All sites were responsive designs utilizing mobile first approach. Tools used for the design side UI were Photoshop/XD',
       img_thumb: 'https://rs-brown.com/images/thumbs/fender-thumb.jpg',
       img: 'https://rs-brown.com/images/info/fender/fender-3.jpg',
     },
