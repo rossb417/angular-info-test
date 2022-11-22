@@ -68,9 +68,9 @@ export const Portfolio = [
       icon: PrimeIcons.COG,
       color: '#673AB7',
       company: 'SheKnows',
-      position: 'Sr. UI/UX Designer / Software Engineer',
+      position: 'UI Software Engineer',
       summary:
-        'Originally hired for the design team and then went to lead the UX team. Designed feature sites for SheKnows.com owned websites. Designed custom newsletters and woman magazines that were converted to online blogs. Designed Facebook site for ones of the greatest photographers in the world',
+        'Part of the UX/UI team that designed feature sites for SheKnows.com owned websites. Designed and built custom newsletters for woman magazines. Designed Facebook and social sites for  feature products and help maintain front end development of Sheknows and parenting sites.',
       img_thumb: 'https://rs-brown.com/images/thumbs/samsonite-thumb.jpg',
       img: 'https://rs-brown.com/images/info/fender/samsonite-2.jpg',
     },
