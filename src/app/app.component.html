@@ -148,7 +148,7 @@
 </ng-template>
 
 <ng-template #resumeSkills let-item>
-  <div class="{{ item.class }} grid">
+  <div class="{{ item.class }} grid grid-nogutter">
     <h6>{{ item.header }}</h6>
     <div class="col-12 lg:col-4" *ngFor="let row of item.columns">
       <ul
