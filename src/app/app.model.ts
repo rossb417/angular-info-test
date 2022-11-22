@@ -80,7 +80,7 @@ export const Portfolio = [
 export const Clients = [
     {
       class: 'clients',
-      header: 'Clients I have worked for',
+      header: 'Clients I have worked for/with',
       images: [
         {
           img_thumb: 'https://rs-brown.com/images/clients/thumbs/fender.png',

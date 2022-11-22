@@ -45,11 +45,13 @@
       </p-timeline>
     </div>
 
-    <ng-container
-      [ngTemplateOutlet]="resumeClientList"
-      [ngTemplateOutletContext]="{ list: model.clients }"
-    ></ng-container>
-<!--
+    <div class="col-12 p-4">
+      <ng-container
+        [ngTemplateOutlet]="resumeClientList"
+        [ngTemplateOutletContext]="{ list: model.clients }"
+      ></ng-container>
+    </div>
+    <!--
     <ng-container
       [ngTemplateOutlet]="resumePortfolioList"
       [ngTemplateOutletContext]="{ list: model.resumeInfo.portfolio }"
@@ -117,7 +119,7 @@
   <h4>{{ item.header }}</h4>
   <div class="{{ item.class }} grid">
     <div
-      class="col-1 surface-card shadow-2 p-3 border-round mr-2"
+      class="col-2 surface-card shadow-2 p-3 border-round mr-2 mb-2"
       *ngFor="let data of item.images"
     >
       <img src="{{ data.img_thumb }}" alt="portfolio image" class="w-full" />
